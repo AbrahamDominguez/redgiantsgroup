@@ -22,7 +22,7 @@ tau_0 = 0
 
 #Surface Boundary Conditions
 tau_out = 2/3 #This is the opacity at the outside of the star, 
-			  #comes from tau(infinity) - tau(Radius of star)
+              #comes from tau(infinity) - tau(Radius of star)
 
 # Sample Values at suface from section 3
 Tstar = 3.056*10**3

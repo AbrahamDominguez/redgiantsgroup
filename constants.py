@@ -33,8 +33,8 @@ drho_0 = 0
 T_0 = 8.23*10**6 #T_c from section 3
 dT_0 = 0
 tau_0 = 0
-kappa_0 = 1 # For now anyway
-dtau_0 = kappa_0*rho_0
+kappa = 1 # For now anyway
+dtau_0 = kappa*rho_0
 
 gamma = 5.0/3.0
 

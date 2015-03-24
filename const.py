@@ -52,4 +52,4 @@ Mstar = 0.673*Msun
 Lstar = (5.86*10**(-2))*Lsun
 
 #steping interval
-step = 1000000
+step = 100000

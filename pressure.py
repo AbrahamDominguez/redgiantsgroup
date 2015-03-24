@@ -14,7 +14,7 @@ def dP_T(rho, T):
            + 4.0/3.0*(T**3 * const.a)
 
 def dP_rho(rho, T):
-    return (3.0*const.pi**2)**(2.0/3.0)*(const.hbar**2)/(3.0*const.me)*(rho/const.mp)**(2.0/3.0)\
+    return (3.0*const.pi**2)**(2.0/3.0)*(const.hbar**2)/(3.0*const.me)*(rho)**(2.0/3.0)*(1.0/const.mp)**(5.0/3.0)\
            + const.kb*T/(mu.get_mu()*const.mp)
 
 def iterate():

@@ -1,4 +1,3 @@
-
 import density, energy, kappa, luminosity, mass, mu, opacity, pressure, temperature
 v_y = []
 

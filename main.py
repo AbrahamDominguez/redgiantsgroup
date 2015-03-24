@@ -16,12 +16,20 @@ loops = 0
 try:
     while(True):
         loops += 1
+        
+        temperature.rk4.updateK()
+        mass.rk4_mass.updateK()
+        luminosity.Solver.updateK()
+        density.rk4.updateK()
+        opacity.solver.updateK()
+        
+        temperature.iterate()
         mass.iterate()
         luminosity.iterate()
-        pressure.iterate()
         density.iterate()
-        temperature.iterate()
         opacity.iterate()
+        
+        pressure.iterate()
         kappa.iterate()
         #print kappa.get()
         #print(luminosity.get())
@@ -57,10 +65,10 @@ for i in xrange(loops):
 #plt.plot(density.rk4.v_t, kappa.v_y)
 #plt.show()
 
-plt.plot(array(temperature.rk4.v_t)/const.Rstar, temperature.rk4.v_y)
-plt.plot(array(luminosity.Solver.v_t)/const.Rstar, luminosity.Solver.v_y)
-plt.plot(array(mass.rk4_mass.v_t)/const.Rstar, mass.rk4_mass.v_y)
-plt.plot(array(density.rk4.v_t)/const.Rstar, density.rk4.v_y)
+plt.plot(temperature.rk4.v_t, temperature.rk4.v_y)
+plt.plot(luminosity.Solver.v_t, luminosity.Solver.v_y)
+plt.plot(mass.rk4_mass.v_t, mass.rk4_mass.v_y)
+plt.plot(density.rk4.v_t, density.rk4.v_y)
 plt.show()
 
 plt.plot(density.rk4.v_t, pressure.v_y)

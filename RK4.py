@@ -30,15 +30,10 @@ class RK4:
         self.updateK();  
 
     def iterate(self):
-        #print("first: " + str(self.y) + " ~ " + str(const.step/6.0*(self.k1 + 2.0*self.k2 + 2.0*self.k3 + self.k4)))
         self.y += const.step/6.0*(self.k1 + 2.0*self.k2 + 2.0*self.k3 + self.k4)
-        #print("second: " + str(self.y))
-        #print("first: " + str(self.t) + " ~ " + str(const.step))
         self.t += const.step
-        #print("second: " + str(self.t) + " ~ " + str(const.step))
         self.v_t.append(self.t)
         self.v_y.append(self.y)
-        self.updateK()
 
     def get(self):
         return self.y

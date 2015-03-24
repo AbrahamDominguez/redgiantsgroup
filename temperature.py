@@ -16,7 +16,7 @@ def dT_dr(r, T):
         print "rad"
     #else:
        # print "conv"
-    return -min(conv, rad)
+    return -min(abs(conv), abs(rad))
 
 rk4 = RK4(dT_dr, const.T_0, 1E-10)
 
